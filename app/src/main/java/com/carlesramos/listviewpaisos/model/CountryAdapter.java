@@ -2,8 +2,6 @@ package com.carlesramos.listviewpaisos.model;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.DrawableContainer;
-import android.graphics.drawable.Icon;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,25 +36,9 @@ public class CountryAdapter extends ArrayAdapter<Country> {
         tvPoblacio.setText(String.valueOf(datos[position].getPopulation()));
         //imagen
         ImageView ivBandera = item.findViewById(R.id.ivBandera);
-        ivBandera.setImageDrawable(ivBandera.getResources().getDrawable(Icons[position]));
+        int id = this.getContext().getResources().getIdentifier("_"+datos[position].getCountryCode().toLowerCase()
+                , "drawable", this.getContext().getPackageName());
+        ivBandera.setImageResource(id);
         return item;
     }
-
-    public static final Integer[] Icons = {
-            R.drawable._ad,
-            R.drawable._ae,
-            R.drawable._af,
-            R.drawable._ag,
-            R.drawable._ai,
-            R.drawable._al,
-            R.drawable._am,
-            R.drawable._an,
-            R.drawable._ao,
-            R.drawable._aq,
-            R.drawable._as,
-            R.drawable._at,
-            R.drawable._au,
-            R.drawable._aw,
-            R.drawable._az
-    };
 }

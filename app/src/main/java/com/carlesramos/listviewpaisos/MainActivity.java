@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         paisos = parser.getCountries();
         lvPrincipal = findViewById(R.id.lvPrincipal);
         adaptadorPaisos = new CountryAdapter(MainActivity.this,paisos);
+
         lvPrincipal.setAdapter(adaptadorPaisos);
     }
 }

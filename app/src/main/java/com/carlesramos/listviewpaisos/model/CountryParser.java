@@ -56,7 +56,7 @@ public class CountryParser {
             /** Inicializamos el array de countries con tamaño igual al número de nodos de tipo country */
             countries = new Country[items.getLength()];
             /** Recorremos cada uno de los nodos */
-            for (int i = 0; i < CountryAdapter.Icons.length; i++) {
+            for (int i = 0; i < countries.length; i++) {
 
                 /** Obtenemos el nodo de la posición i */
                 Node item = items.item(i);
