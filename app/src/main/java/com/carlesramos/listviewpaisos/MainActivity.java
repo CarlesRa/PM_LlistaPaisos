@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        parser = new CountryParser(this);
         parser.parse();
-        //paisos = parser.getCountries();
-        //lvPrincipal = findViewById(R.id.lvPrincipal);
-        //adaptadorPaisos = new CountryAdapter(this,paisos);
-        //lvPrincipal.setAdapter(adaptadorPaisos);
+        paisos = parser.getCountries();
+        lvPrincipal = findViewById(R.id.lvPrincipal);
+        adaptadorPaisos = new CountryAdapter(MainActivity.this,paisos);
+        lvPrincipal.setAdapter(adaptadorPaisos);
     }
 }

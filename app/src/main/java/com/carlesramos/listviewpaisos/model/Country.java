@@ -15,6 +15,9 @@ public class Country {
         this.countryIso3 = countryIso3;
     }
 
+    public String getCountryCode() {
+        return countryCode;
+    }
 
     public String getCountryName() {
         return countryName;
@@ -28,4 +31,7 @@ public class Country {
         return capital;
     }
 
+    public String getCountryIso3() {
+        return countryIso3;
+    }
 }

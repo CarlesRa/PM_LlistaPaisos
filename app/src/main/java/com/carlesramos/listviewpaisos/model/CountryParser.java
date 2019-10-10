@@ -1,8 +1,8 @@
 package com.carlesramos.listviewpaisos.model;
 
 import android.content.Context;
+import android.media.Image;
 import android.util.Log;
-
 import com.carlesramos.listviewpaisos.R;
 
 import org.w3c.dom.Document;
@@ -56,7 +56,8 @@ public class CountryParser {
             /** Inicializamos el array de countries con tamaño igual al número de nodos de tipo country */
             countries = new Country[items.getLength()];
             /** Recorremos cada uno de los nodos */
-            for (int i = 0; i < items.getLength(); i++) {
+            for (int i = 0; i < CountryAdapter.Icons.length; i++) {
+
                 /** Obtenemos el nodo de la posición i */
                 Node item = items.item(i);
                 /** Obtenemos los atributos necesarios para construir cada objeto Country */
